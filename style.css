@@ -28,7 +28,7 @@ a {
 .navlinks {
     display: flex;
     justify-content: space-between;
-    width: 30%;
+    width: 35%;
     /* background: red; */
     align-items: center;
 }
@@ -73,11 +73,12 @@ a {
 
 .header {
     background: url("./images/desktop/image-header.jpg");
-    background-size: 100%;
+    background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
-    background-position: bottom;
+    background-position: center;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -87,11 +88,13 @@ a {
     font-size: 3rem;
     font-weight: 900;
     letter-spacing: 15px;
-    transform: translate(0, -300%);
+    margin-bottom: 3rem;
+    text-align: center;
+    /* background: teal; */
 }
 .header img {
-    transform: translate(-1050%, 0);
-    /* height: 6rem; */
+    margin-top: 2.5rem;
+    /* display: block; */
 }
 
 /* ========================== CHESS ========================== */
@@ -140,7 +143,7 @@ a {
     content: "";
     display: block;
     background: #f9dad2;
-    height: 10px;
+    height: 0.625rem;
     width: 30%;
     position: absolute;
     bottom: -2px;
@@ -152,7 +155,7 @@ a {
     content: "";
     display: block;
     background: #fcf2c3;
-    height: 10px;
+    height: 0.625rem;
     width: 30%;
     position: absolute;
     bottom: -2px;
@@ -179,7 +182,8 @@ a {
 .orange {
     background-repeat: no-repeat;
     flex: 1;
-    background-size: 100%;
+    background-size: cover;
+    background-position: center;
 }
 .orange div,
 .cherry div {
@@ -271,22 +275,22 @@ a {
 .photography .img1 {
     background: url("./images/desktop/image-gallery-milkbottles.jpg");
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
 }
 .photography .img2 {
     background: url("./images/desktop/image-gallery-orange.jpg");
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
 }
 .photography .img3 {
     background: url("./images/desktop/image-gallery-cone.jpg");
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
 }
 .photography .img4 {
     background: url("./images/desktop/image-gallery-sugarcubes.jpg");
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
 }
 .photography div {
     flex: 1;
@@ -324,4 +328,84 @@ footer h3 {
     list-style: none;
     justify-content: space-between;
     width: 10%;
+}
+
+/* ========================== MEDIA QUERY ========================== */
+.burger {
+    /* display: flex;
+    flex-direction: column; */
+    /* background: teal; */
+    display: none;
+}
+.burger div {
+    height: 0.2rem;
+    width: 2.3rem;
+    background: white;
+    margin-bottom: 0.5rem;
+}
+.navbar-dropdown {
+    display: none;
+}
+@media screen and (max-width: 1300px) {
+    /* body {
+        display: none;
+    } */
+    .logo {
+        flex: 1;
+    }
+    .navlinks {
+        flex: 1;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    * {
+        font-size: 95%;
+    }
+    .navlinks {
+        display: none;
+    }
+    .burger {
+        display: block;
+    }
+    .egg-text div,
+    .glass-text div {
+        width: 80%;
+    }
+    /* .navbar{
+        padding: 0;
+    } */
+}
+
+@media screen and (max-width: 800px) {
+    * {
+        font-size: 90%;
+    }
+    .row {
+        flex-direction: column;
+        height: 100vh;
+    }
+    .row1 :nth-child(1) {
+        order: 2;
+    }
+    .row1 :nth-child(2) {
+        order: 1;
+    }
+    .egg-text :nth-child(1) {
+        flex-direction: column-reverse;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .testimonial .container{
+        display: block;
+    }
+    .card p{
+        margin: 1.5rem 0;
+    }
+
+    /* .testimonial h3{
+        margin: ;
+    } */
+ 
 }
